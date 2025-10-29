@@ -300,9 +300,9 @@ static void update_time() {
   //display second
   
   //create another buffer
-  static char date_buffer[] = "0000-000-00";
+  static char date_buffer[] = "00-000-00---";
   //write current date to buffer
-  strftime(date_buffer, sizeof("0000-000-00"), "%Y %h %d", tick_time);
+  strftime(date_buffer, sizeof("00-000-00---"), "'%y  %h %d", tick_time);
   //display second
   text_layer_set_text(s_date_layer, date_buffer);
   
